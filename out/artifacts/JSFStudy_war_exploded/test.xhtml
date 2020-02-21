@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<h:head>
+    <title>遺失物管理システム</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:panel header="テスト用" styleClass="innerCenter" style="max-width: 500px;width: 100%;">
+            <p:commandButton value="CSVファイル出力" action="#{testForm.csvTest}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA111201PDF出力" action="#{ma111201Report.pdf}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA111301PDF出力" action="#{ma111301Report.pdf}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA111511PDF出力" action="#{ma111511Report.pdf}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA112501PDF出力" action="#{ma112501Report.pdf}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA113301PDF出力" action="#{ma113301Report.pdf}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA115301TSV出力(基本情報)" action="#{ma115301Report.createKihonjoh}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA115301TSV出力(提出物件)" action="#{ma115301Report.createTeishutsu}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA115301TSV出力(保管物件)" action="#{ma115301Report.createHokan}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA115301TSV出力(売却物件)" action="#{ma115301Report.createBaikyaku}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA115301TSV出力(処分情報)" action="#{ma115301Report.createShobun}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA115301TSV出力(全て)" action="#{ma115301Report.createAll}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA913211CSV出力(BS)" action="#{ma913101Report.createBs}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA913221CSV出力(DT)" action="#{ma913101Report.createDt}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA913231CSV出力(AM)" action="#{ma913101Report.createAm}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA913241CSV出力(RT)" action="#{ma913101Report.createRt}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+            <p:commandButton value="MA913251CSV出力(IM)" action="#{ma913101Report.createIm}" ajax="false" validateClient="false" style="margin-bottom:10px;"/>
+        </p:panel>
+    </h:form>
+</h:body>
+</html>
