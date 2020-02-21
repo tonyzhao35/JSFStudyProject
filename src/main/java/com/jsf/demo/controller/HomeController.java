@@ -1,4 +1,4 @@
-package controller;
+package com.jsf.demo.controller;
 
 //import javax.inject.Named;
 //

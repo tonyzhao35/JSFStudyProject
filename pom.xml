@@ -7,6 +7,18 @@
     <groupId>com.jsfstudy</groupId>
     <artifactId>JSFStudy</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <name>JSF</name>
 
@@ -21,6 +33,10 @@
         <el-api.version>2.2</el-api.version>
         <jsf-api.version>2.0</jsf-api.version>
         <org.springframework.version>5.2.2.RELEASE</org.springframework.version>
+        <org.projectlombok.version>1.18.2</org.projectlombok.version>
+        <javax.validation.version>2.0.1.Final</javax.validation.version>
+        <org.hibernate.version>5.2.4.Final</org.hibernate.version>
+        <commons-validator.version>1.6</commons-validator.version>
     </properties>
 
     <dependencies>
@@ -98,6 +114,31 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>${org.springframework.version}</version>
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${org.projectlombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Validator -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax.validation.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${org.hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>${commons-validator.version}</version>
         </dependency>
     </dependencies>
 

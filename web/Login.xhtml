@@ -19,14 +19,15 @@
     <h2>JSF测试</h2>
     <p:separator/>
     <br/>
-    <f:metadata>
-        <f:event type="preRenderView" listener="#{user.init}" />
-    </f:metadata>
     <h:form id="fm">
         <p:panelGrid columns="2" layout="grid">
             <h:panelGroup layout="block" style="">
-                <h:inputText id="username" value="#{user.name}" required="true" requiredMessage="User Name is required"></h:inputText>
-                <h:commandButton id="submit-button" value="Submit" action="response.xhtml"/>
+                <h:inputText id="username" value="#{userLoginForm.userId}" required="true" requiredMessage="User ID is required"></h:inputText>
+                <h:inputText id="password" value="#{userLoginForm.password}" required="true" requiredMessage="Password is required"></h:inputText>
+                <h:commandButton id="submit-button" value="OK" action="#{userLoginForm.login}"/>
+                <p:messages>
+                    <p:autoUpdate />
+                </p:messages>
             </h:panelGroup>
         </p:panelGrid>
     </h:form>
